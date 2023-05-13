@@ -1,20 +1,21 @@
 package com.cabtrips.service;
 
-import java.util.List;
 import org.springframework.data.domain.Pageable;
 import com.cabtrips.entity.*;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
 public interface TripService {
 
-	void saveOne(Trip trip);
+	Mono<Trip> saveOne(Trip trip);
 
-	Trip updateOne(String id, Trip trip) throws Exception;
+	Mono<Trip> updateOne(String id, Trip trip) throws Exception;
 
-	long countByCityName(String city);
+	Mono<Long> countByCityName(String city);
 
-	long countByCountryName(String country);
+	Mono<Long> countByCountryName(String country);
 
-	long countAllRecords();
+	Mono<Long> countAllRecords();
 
-	List<Trip> findCurrentRecords(String status, Pageable pageable);
+	Flux<Trip> findCurrentRecords(String status, Pageable pageable);
 }

@@ -18,12 +18,14 @@ _Que cosas necesitas para probar el proyecto_
 
 ### Instalación 🔧
 
-_Rpimero debes de ambientar el entorno para las pruebas_
+_Primero debes de ambientar el entorno para las pruebas_
 
 _Configura_
 
 ```
-- Configurar el "application.properties" del proyecto, cambiar url de la base de datos.
+- Crear Database name: "cabtrips" y Collection Name: "trips"
+- Importa data del Archivo "trips.json" que se encuentra en /src/main/resources/
+- Configurar el "application.properties" del proyecto, cambiar url de la base de datos segun corresponda.
 ```
 
 ## Ejecutando las pruebas ⚙️
@@ -36,18 +38,26 @@ _Debes de utilizar los siguientes endpoints_
 
 ```
 - Metodo Get:
+
     -localhost:8070/trip/v1/countRecords
         *Consultar la cantidad de viajes totales.
+        
     -localhost:8070/trip/v1/countCity/{city}
         *Consultar la cantidad de viajes totales por ciudad.
+        
     -localhost:8070/trip/v1/countCountry/{country}
         *Consultar la cantidad de viajes totales por país.
+        
     -localhost:8070/trip/v1/currentRecords/{status}/{page}/{size}
         *Consultar los viajes actuales.
+        
 - Metodo Post:
+
     -localhost:8070/trip/v1/saveRecord
         *Crear un viaje.
+        
 - Metodo Put:
+
     -localhost:8070/trip/v1/updateRecord/{id}
         *Actualizar un viaje.
 ```

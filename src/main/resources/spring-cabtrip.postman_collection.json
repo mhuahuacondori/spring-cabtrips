@@ -1,0 +1,154 @@
+{
+	"info": {
+		"_postman_id": "687fcf75-ebb3-4671-b202-c4e38307be94",
+		"name": "spring-cabtrip",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11793884"
+	},
+	"item": [
+		{
+			"name": "countRecords",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8070/trip/v1/countRecords",
+					"host": [
+						"localhost"
+					],
+					"port": "8070",
+					"path": [
+						"trip",
+						"v1",
+						"countRecords"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "countCity",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8070/trip/v1/countCity/Bogotá",
+					"host": [
+						"localhost"
+					],
+					"port": "8070",
+					"path": [
+						"trip",
+						"v1",
+						"countCity",
+						"Bogotá"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "countCountry",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8070/trip/v1/countCountry/Peru",
+					"host": [
+						"localhost"
+					],
+					"port": "8070",
+					"path": [
+						"trip",
+						"v1",
+						"countCountry",
+						"Peru"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveRecord",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"start\": {\n      \"date\": \"2023-05-13\",\n      \"pickupAddress\": \"Av. Peru\",\n      \"pickupLocation\": {\n        \"type\": \"Point\",\n        \"coordinates\": [\n          -74.0521168,\n          4.663258900000001\n        ]\n      }\n    },\n    \"end\": {\n      \"date\": null,\n      \"pickupAddress\": \"Av. El Caribe\",\n      \"pickupLocation\": {\n        \"type\": \"Point\",\n        \"coordinates\": [\n          -74.1440162,\n          4.626478\n        ]\n      }\n    },\n    \"country\": {\n      \"name\": \"Peru\"\n    },\n    \"city\": {\n      \"name\": \"Arequipa\"\n    },\n    \"passenger\": {\n      \"firstName\": \"Marco\",\n      \"lastName\": \"Quispe\"\n    },\n    \"driver\": {\n      \"firstName\": \"Pedro \",\n      \"lastName\": \"Inafantes \"\n    },\n    \"car\": {\n      \"plate\": \"YYYY\"\n    },\n    \"status\": \"started\",\n    \"checkCode\": \"25\",\n    \"createdAt\": {\n      \"date\": \"2018-05-13\"\n    },\n    \"updatedAt\": {\n      \"date\": \"2018-05-13\"\n    },\n    \"price\": 26500.0,\n    \"driverLocation\": {\n      \"type\": \"Point\",\n      \"coordinates\": [\n        -74.05953258275986,\n        4.670541843587515\n      ]\n    }\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8070/trip/v1/saveRecord",
+					"host": [
+						"localhost"
+					],
+					"port": "8070",
+					"path": [
+						"trip",
+						"v1",
+						"saveRecord"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateRecord",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"start\": {\n      \"date\": \"2023-05-13\",\n      \"pickupAddress\": \"Av. Peru\",\n      \"pickupLocation\": {\n        \"type\": \"Point\",\n        \"coordinates\": [\n          -74.0521168,\n          4.663258900000001\n        ]\n      }\n    },\n    \"end\": {\n      \"date\": null,\n      \"pickupAddress\": \"Av. El Caribe\",\n      \"pickupLocation\": {\n        \"type\": \"Point\",\n        \"coordinates\": [\n          -74.1440162,\n          4.626478\n        ]\n      }\n    },\n    \"country\": {\n      \"name\": \"Peru\"\n    },\n    \"city\": {\n      \"name\": \"Arequipa\"\n    },\n    \"passenger\": {\n      \"firstName\": \"Marco\",\n      \"lastName\": \"Quispe\"\n    },\n    \"driver\": {\n      \"firstName\": \"Pedro \",\n      \"lastName\": \"Inafantes \"\n    },\n    \"car\": {\n      \"plate\": \"XZXZ\"\n    },\n    \"status\": \"started\",\n    \"checkCode\": \"25\",\n    \"createdAt\": {\n      \"date\": \"2018-05-13\"\n    },\n    \"updatedAt\": {\n      \"date\": \"2018-05-13\"\n    },\n    \"price\": 26500.0,\n    \"driverLocation\": {\n      \"type\": \"Point\",\n      \"coordinates\": [\n        -74.05953258275986,\n        4.670541843587515\n      ]\n    }\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8070/trip/v1/updateRecord/646013cf407a947aed32f7ef",
+					"host": [
+						"localhost"
+					],
+					"port": "8070",
+					"path": [
+						"trip",
+						"v1",
+						"updateRecord",
+						"646013cf407a947aed32f7ef"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "currentRecords",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8070/trip/v1/currentRecords/started/2/10",
+					"host": [
+						"localhost"
+					],
+					"port": "8070",
+					"path": [
+						"trip",
+						"v1",
+						"currentRecords",
+						"started",
+						"2",
+						"10"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
